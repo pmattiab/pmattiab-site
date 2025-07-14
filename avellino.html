@@ -43,11 +43,6 @@
             margin-top: 20px;
         }
 
-        .list-title.bg-red {
-            background-color: transparent;
-            color: #a60000;
-        }
-
         .list-title.red {
             background-color: #641414;
         }
@@ -59,6 +54,33 @@
 
         .list-group-item.no-number {
             padding-left: 45px;
+        }
+
+        .over::after, .under::after, .bandiera::after, .inf::after {
+            font-size: 11px;
+            border-radius: 6px;
+            padding: 1px 6px;
+            margin-left: 10px;
+        }
+
+        .over::after {
+            content: "Over";
+            background-color: #2952b3;
+        }
+
+        .under::after {
+            content: "Under";
+            background-color: #297314;
+        }
+
+        .bandiera::after {
+            content: "Bandiera";
+            background-color: #297314;
+        }
+
+        .inf::after {
+            content: "Infortunato";
+            background-color: #641414;
         }
 
     </style>
@@ -80,63 +102,71 @@
                         
                         <ul class="list-group">
                             <li class="list-group-item list-title">PORTIERI</span></li>
-                            <li class="list-group-item"><span>01. Iannarilli</span></li>
-                            <li class="list-group-item no-number"><span>Daffara</span></li>
-                            <li class="list-group-item no-number"><span>Pane</span></li>
+                            <li class="list-group-item"><span class="over">Iannarilli</span></li>
+                            <li class="list-group-item"><span class="under">Daffara</span></li>
+                            <li class="list-group-item"><span class="bandiera">Pane</span></li>
                         </ul>
 
                         <ul class="list-group">
                             <li class="list-group-item list-title">DIFENSORI</span></li>
-                            <li class="list-group-item"><span>02. Enrici</span></li>
-                            <li class="list-group-item"><span>03. Rigione</span></li>
-                            <li class="list-group-item"><span>04. Manzi</span></li>
-                            <li class="list-group-item"><span>05. Simic</span></li>
-                            <li class="list-group-item"><span>06. Cagnano</span></li>
-                            <li class="list-group-item no-number"><span> Milani</span></li>
-                            <li class="list-group-item"><span>07. Cancellotti</span></li>
-                            <li class="list-group-item no-number"><span>Todisco</span></li>
+                            <li class="list-group-item"><span class="over">Enrici</span></li>
+                            <li class="list-group-item"><span class="over">Rigione</span></li>
+                            <li class="list-group-item"><span class="over">Manzi</span></li>
+                            <li class="list-group-item"><span class="over">Simic</span></li>
+                            <li class="list-group-item"><span class="over">Cagnano</span></li>
+                            <li class="list-group-item"><span class="under"> Milani</span></li>
+                            <li class="list-group-item"><span class="over">Cancellotti</span></li>
+                            <li class="list-group-item"><span class="under">Todisco</span></li>
                         </ul>
 
                         <ul class="list-group">
                             <li class="list-group-item list-title">CENTROCAMPISTI</span></li>
-                            <li class="list-group-item"><span>08. Palmiero</span></li>
-                            <li class="list-group-item no-number"><span>Palumbo</span></li>
-                            <li class="list-group-item no-number"><span>Kumi</span></li>
-                            <li class="list-group-item"><span>09. Gyabuaa </span></li>
-                            <li class="list-group-item"><span>10. Sounas</span></li>
-                            <li class="list-group-item"><span>11. Armellino</span></li>
+                            <li class="list-group-item"><span class="over">Palmiero</span></li>
+                            <li class="list-group-item"><span class="under">Palumbo</span></li>
+                            <li class="list-group-item"><span class="under">Kumi</span></li>
+                            <li class="list-group-item"><span class="over">Gyabuaa </span></li>
+                            <li class="list-group-item"><span class="over">Sounas</span></li>
+                            <li class="list-group-item"><span class="over">Armellino</span></li>
                         </ul>
                         
                         <ul class="list-group">
                             <li class="list-group-item list-title">ATTACCANTI</span></li>
-                            <li class="list-group-item"><span>12. Russo</span></li>
-                            <li class="list-group-item no-number"><span>D'Andrea</span></li>
-                            <li class="list-group-item"><span>13. Lescano</span></li>
-                            <li class="list-group-item"><span>14. Favilli</span></li>
-                            <li class="list-group-item no-number"><span>Crespi</span></li>
-                            <li class="list-group-item"><span>15. Patierno</span></li>
+                            <li class="list-group-item"><span class="over">Russo</span></li>
+                            <li class="list-group-item"><span class="under">D'Andrea</span></li>
+                            <li class="list-group-item"><span class="over">Lescano</span></li>
+                            <li class="list-group-item"><span class="over">Favilli</span></li>
+                            <li class="list-group-item"><span class="under">Crespi</span></li>
+                            <li class="list-group-item"><span class="over">Patierno</span></li>
                         </ul>
 
-                        <ul class="list-group">
-                            <li class="list-group-item list-title bg-red">INFORTUNATI</span></li>
-                            <li class="list-group-item no-number"><span>De Cristofaro</span></li>
-                        </ul>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        <p class="text-muted">Attualmente confermati:<br />15 over<br />7 under<br />1 bandiera</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
 
                         <ul class="list-group">
                             <li class="list-group-item list-title red">IN USCITA</span></li>
-                            <li class="list-group-item no-number"><span>Marson</span></li>
-                            <li class="list-group-item no-number"><span>Mulè</span></li>
-                            <li class="list-group-item no-number"><span>Frascatore</span></li>
-                            <li class="list-group-item no-number"><span>Cancellieri</span></li>
-                            <li class="list-group-item no-number"><span>Toscano</span></li>
-                            <li class="list-group-item no-number"><span>Pezzella</span></li>
-                            <li class="list-group-item no-number"><span>Rocca</span></li>
-                            <li class="list-group-item no-number"><span>D'Angelo</span></li>
-                            <li class="list-group-item no-number"><span>D'Ausilio</span></li>
-                            <li class="list-group-item no-number"><span>Tribuzzi</span></li>
-                            <li class="list-group-item no-number"><span>Panico</span></li>
-                            <li class="list-group-item no-number"><span>Redan</span></li>
-                            <li class="list-group-item no-number"><span>Gori</span></li>
+                            <li class="list-group-item"><span>Marson</span></li>
+                            <li class="list-group-item"><span>Mulè</span></li>
+                            <li class="list-group-item"><span>Frascatore</span></li>
+                            <li class="list-group-item"><span>Cancellieri</span></li>
+                            <li class="list-group-item"><span class="inf">De Cristofaro</span></li>
+                            <li class="list-group-item"><span>Toscano</span></li>
+                            <li class="list-group-item"><span>Pezzella</span></li>
+                            <li class="list-group-item"><span>Rocca</span></li>
+                            <li class="list-group-item"><span>D'Angelo</span></li>
+                            <li class="list-group-item"><span>D'Ausilio</span></li>
+                            <li class="list-group-item"><span>Tribuzzi</span></li>
+                            <li class="list-group-item"><span>Panico</span></li>
+                            <li class="list-group-item"><span>Redan</span></li>
+                            <li class="list-group-item"><span>Gori</span></li>
                         </ul>
 
                     </div>
