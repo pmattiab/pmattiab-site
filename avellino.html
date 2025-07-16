@@ -57,6 +57,8 @@
         }
 
         .over::after, .under::after, .bandiera::after, .inf::after {
+            display: inline-block;
+            color: #FFFFFF !important;
             font-size: 11px;
             border-radius: 6px;
             padding: 1px 6px;
@@ -76,6 +78,10 @@
         .bandiera::after {
             content: "Bandiera";
             background-color: #297314;
+        }
+
+        #confirmed .over::after, #confirmed .under::after, #confirmed .bandiera::after {
+            transform: translate(-9px, -2px);
         }
 
         .inf::after {
@@ -142,9 +148,9 @@
                     </div>
                 </div>
 
-                <div class="row mt-4">
+                <div class="row mt-4" id="confirmed">
                     <div class="col text-center">
-                        <p class="text-muted">Attualmente confermati:<br />15 over - 7 under - 1 bandiera</p>
+                        <span>Attualmente confermati:<br />15 <span class="over"></span> 7 <span class="under"></span> 1 <span class="bandiera"></span></span>
                     </div>
                 </div>
 
