@@ -170,7 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         elements.skillsMainTitle.textContent = data.skills;
         elements.contactsMainTitle.textContent = data.contacts;
-        elements.subHeroText.textContent = data.subHero;
+        
+        // Modificato qui: usiamo il selettore di classe così aggiorna sempre il testo corretto
+        document.querySelectorAll(".label-subhero").forEach(el => el.textContent = data.subHero);
 
         elements.frontEndTitle.textContent = "Front-end";
         elements.backEndTitle.textContent = "Back-end";
@@ -208,7 +210,8 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem('portfolio-lang', config.currentLang);
             updateInterfaceTexts();
 
-            if (config.activeSection === "") {
+            // Forza il reset del titolo della macchina da scrivere se siamo sulla Home
+            if (config.activeSection === "home" || config.activeSection === "") {
                 clearTimeout(config.typingTimeout);
                 elements.devTitle.textContent = "";
                 idxTitle = 0;
