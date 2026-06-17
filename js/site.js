@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:scale-110 transition-transform duration-200 overflow-hidden p-1.5 shadow-sm">
                     <img class="max-w-full max-h-full object-contain" src="img/${item.path}" alt="${item.title}">
                 </div>
-                <div class="font-medium text-slate-600 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">${item.title}</div>
+                <div class="font-medium text-slate-600 dark:text-slate-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200">${item.title}</div>
             `;
             fragment.appendChild(wrapper);
         });
@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Reset classi attive bottoni desktop
         [elements.navHome, elements.navSkills, elements.navContacts].forEach(btn => {
-            btn.className = "group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer transition-all";
+            btn.className = "group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all";
         });
         // Reset classi attive bottoni mobile
         [elements.navHomeMobile, elements.navSkillsMobile, elements.navContactsMobile].forEach(btn => {
@@ -311,8 +311,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Applica stili al bottone attivo in base alla sezione
         if (sectionName === "home") {
-            elements.navHome.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 cursor-pointer";
-            elements.navHomeMobile.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 cursor-pointer w-full";
+            elements.navHome.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer";
+            elements.navHomeMobile.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer w-full";
             
             elements.header.classList.remove('hidden');
             await delay(50);
@@ -320,8 +320,8 @@ document.addEventListener("DOMContentLoaded", () => {
             elements.header.classList.add('opacity-100');
 
         } else if (sectionName === "skills") {
-            elements.navSkills.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 cursor-pointer";
-            elements.navSkillsMobile.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 cursor-pointer w-full";
+            elements.navSkills.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer";
+            elements.navSkillsMobile.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer w-full";
             
             elements.skillsSection.classList.remove('hidden');
             await delay(50);
@@ -339,8 +339,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         } else if (sectionName === "contacts") {
-            elements.navContacts.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 cursor-pointer";
-            elements.navContactsMobile.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 cursor-pointer w-full";
+            elements.navContacts.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer";
+            elements.navContactsMobile.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer w-full";
             
             elements.contactsSection.classList.remove('hidden');
             await delay(50);

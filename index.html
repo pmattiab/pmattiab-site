@@ -20,13 +20,6 @@
     
     <style type="text/tailwindcss">
         @custom-variant dark (&:where(.dark, .dark *));
-
-        /* TRUCCO MAGICO: Quando il tema è dark, deviamo il viola verso il verde */
-        .dark {
-            --color-purple-400: var(--color-emerald-400); /* Il verdino chiaro per i testi (es. dark:text-purple-400) */
-            --color-purple-500: var(--color-emerald-500); /* Per i background o gli hover (es. dark:hover:bg-purple-500) */
-            --color-purple-600: var(--color-emerald-600);
-        }
     </style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -42,25 +35,25 @@
     </style>
 
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300 antialiased selection:bg-emerald-500 selection:text-white">
 
     <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-4xl z-50 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-lg transition-all duration-300 px-4 py-3">
         <div class="flex justify-between items-center w-full">
             
             <div class="hidden md:flex items-center gap-2">
-                <button id="navHome" class="group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 cursor-pointer">
+                <button id="navHome" class="group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer">
                     <i class="fa-solid fa-house text-base"></i>
                     <span class="label-home"></span>
                 </button>
 
                 <div class="h-5 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
 
-                <button id="navSkills" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer transition-all">
+                <button id="navSkills" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all">
                     <i class="fa-solid fa-code text-base"></i> 
                     <span class="label-skills"></span>
                 </button>
 
-                <button id="navContacts" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer transition-all">
+                <button id="navContacts" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all">
                     <i class="fa-regular fa-address-card text-base"></i> 
                     <span class="label-contacts"></span>
                 </button>
@@ -75,7 +68,7 @@
                     <span id="langText" class="flex items-center gap-1.5"></span>
                 </button>
 
-                <button id="themeToggle" class="p-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 cursor-pointer" aria-label="Cambia tema">
+                <button id="themeToggle" class="p-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-200 cursor-pointer" aria-label="Cambia tema">
                     <i id="themeToggleDarkIcon" class="fa-solid fa-moon text-lg" hidden></i>
                     <i id="themeToggleLightIcon" class="fa-solid fa-sun text-lg text-amber-400" hidden></i>
                 </button>
@@ -85,12 +78,12 @@
 
     <div id="mobileDrawer" class="fixed inset-y-0 left-0 w-72 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-r border-slate-200/80 dark:border-slate-800/80 shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-6">
         <div class="flex justify-between items-center mb-8">
-            <span class="font-bold tracking-wider text-indigo-600 dark:text-indigo-400">MB.DEV</span>
+            <span class="font-bold tracking-wider text-emerald-600 dark:text-emerald-400">MB.DEV</span>
             <button id="menuClose" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 cursor-pointer"><i class="fa-solid fa-xmark text-lg"></i></button>
         </div>
         
         <div class="flex flex-col gap-4">
-            <button id="navHomeMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 cursor-pointer w-full">
+            <button id="navHomeMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer w-full">
                 <i class="fa-solid fa-house w-5"></i> <span class="label-home"></span>
             </button>
             <button id="navSkillsMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-300 cursor-pointer w-full">
@@ -115,22 +108,22 @@
 
         <section id="skills" class="hidden opacity-0 transition-all duration-500 pt-28 pb-16">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight border-b-4 border-indigo-500 inline-block pb-2 rounded"></h2>
+                <h2 class="text-3xl font-bold tracking-tight border-b-4 border-emerald-500 inline-block pb-2 rounded"></h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div id="frontEndContainer" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm">
-                    <h3 id="frontEndTitle" class="text-xl font-bold text-center mb-6 text-indigo-600 dark:text-indigo-400"></h3>
+                    <h3 id="frontEndTitle" class="text-xl font-bold text-center mb-6 text-emerald-600 dark:text-emerald-400"></h3>
                     <div class="skill-list flex flex-col gap-2"></div>
                 </div>
 
                 <div id="backEndContainer" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm">
-                    <h3 id="backEndTitle" class="text-xl font-bold text-center mb-6 text-indigo-600 dark:text-indigo-400"></h3>
+                    <h3 id="backEndTitle" class="text-xl font-bold text-center mb-6 text-emerald-600 dark:text-emerald-400"></h3>
                     <div class="skill-list flex flex-col gap-2"></div>
                 </div>
 
                 <div id="toolsContainer" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm">
-                    <h3 id="toolsTitle" class="text-xl font-bold text-center mb-6 text-indigo-600 dark:text-indigo-400"></h3>
+                    <h3 id="toolsTitle" class="text-xl font-bold text-center mb-6 text-emerald-600 dark:text-emerald-400"></h3>
                     <div class="skill-list flex flex-col gap-2"></div>
                 </div>
             </div>
@@ -138,7 +131,7 @@
 
         <section id="contacts" class="hidden opacity-0 transition-all duration-500 pt-28 pb-16">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight border-b-4 border-indigo-500 inline-block pb-2 rounded"></h2>
+                <h2 class="text-3xl font-bold tracking-tight border-b-4 border-emerald-500 inline-block pb-2 rounded"></h2>
             </div>
             
             <div class="max-w-xl mx-auto grid grid-cols-1 gap-4">
@@ -153,23 +146,23 @@
                             <p class="text-base font-medium">Mattia Bocchino</p>
                         </div>
                     </div>
-                    <a id="linkedinBtn" href="https://it.linkedin.com/in/pmattiab" target="_blank" class="w-full sm:w-auto text-center px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all duration-200 cursor-pointer">
+                    <a id="linkedinBtn" href="https://it.linkedin.com/in/pmattiab" target="_blank" class="w-full sm:w-auto text-center px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 transition-all duration-200 cursor-pointer">
                         <span class="btn-profile-text"></span> <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
                     </a>
                 </div>
 
                 <div id="businessEmailContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative group">
                     <div class="flex items-center gap-4 w-full sm:w-auto">
-                        <a href="https://digivents.com" target="_blank" title="Visita Digivents" class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 overflow-hidden p-2 hover:scale-110 hover:ring-2 hover:ring-indigo-500/30 transition-all duration-200 cursor-pointer">
+                        <a href="https://digivents.com" target="_blank" title="Visita Digivents" class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 overflow-hidden p-2 hover:scale-110 hover:ring-2 hover:ring-emerald-500/30 transition-all duration-200 cursor-pointer">
                             <img src="img/logo-digivents.png" alt="Digivents" class="max-w-full max-h-full object-contain">
                         </a>
                         <div class="text-center sm:text-left w-full">
                             <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400"></h4>
-                            <a href="mailto:mattia.bocchino@digivents.com" class="text-base font-medium hover:text-indigo-500 break-all select-all">mattia.bocchino@digivents.com</a>
+                            <a href="mailto:mattia.bocchino@digivents.com" class="text-base font-medium hover:text-emerald-500 break-all select-all">mattia.bocchino@digivents.com</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 w-full sm:w-auto">
-                        <a href="mailto:mattia.bocchino@digivents.com" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-semibold hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
+                        <a href="mailto:mattia.bocchino@digivents.com" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-semibold hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
                             <i class="fa-regular fa-paper-plane"></i> <span class="label-write"></span>
                         </a>
                         <button class="copy-btn w-1/2 sm:w-auto px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer">
@@ -181,16 +174,16 @@
 
                 <div id="goappEmailContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative group">
                     <div class="flex items-center gap-4 w-full sm:w-auto">
-                        <a href="https://goapp.it" target="_blank" title="Visita GoApp" class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 overflow-hidden p-2 hover:scale-110 hover:ring-2 hover:ring-indigo-500/30 transition-all duration-200 cursor-pointer">
+                        <a href="https://goapp.it" target="_blank" title="Visita GoApp" class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 overflow-hidden p-2 hover:scale-110 hover:ring-2 hover:ring-emerald-500/30 transition-all duration-200 cursor-pointer">
                             <img src="img/logo-goapp.png" alt="GoApp" class="max-w-full max-h-full object-contain">
                         </a>
                         <div class="text-center sm:text-left w-full">
                             <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400"></h4>
-                            <a href="mailto:mattia.bocchino@goapp.it" class="text-base font-medium hover:text-indigo-500 break-all select-all">mattia.bocchino@goapp.it</a>
+                            <a href="mailto:mattia.bocchino@goapp.it" class="text-base font-medium hover:text-emerald-500 break-all select-all">mattia.bocchino@goapp.it</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 w-full sm:w-auto">
-                        <a href="mailto:mattia.bocchino@goapp.it" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-semibold hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
+                        <a href="mailto:mattia.bocchino@goapp.it" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-semibold hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
                             <i class="fa-regular fa-paper-plane"></i> <span class="label-write"></span>
                         </a>
                         <button class="copy-btn w-1/2 sm:w-auto px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer">
