@@ -1,119 +1,178 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="dark">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Ciao sono Mattia e sono uno sviluppatore web. Per il front-end utilizzo HTML, CSS, Sass, Javascript con la libreria JQuery e i framework Vue JS, Angular e React. Per il back-end utilizzo C#, .Net, Asp, PHP, il framework Laravel, phpMyAdmin e MySQL">
-    <meta name="keywords" content="software specialist full stack web developer, html, css, bootstrap, tailwind, sass, javascript, jquery, vue, angular, react, js, php, laravel, mysql, git, github">
+    <meta name="description" content="Ciao sono Mattia e sono uno sviluppatore web. Per il front-end utilizzo HTML, CSS, Sass, Javascript e i framework Vue JS, Angular e React. Per il back-end utilizzo C#, .Net, Asp, PHP, il framework Laravel, phpMyAdmin e MySQL">
+    <meta name="keywords" content="software specialist full stack web developer, html, css, bootstrap, tailwind, sass, javascript, vue, angular, react, js, php, laravel, mysql, git, github">
     
     <meta property="og:title" content="Mattia Bocchino software specialist">
-    <meta property="og:description" content="Mattia Bocchino software specialist full stack web developer con HTML, CSS, Javascript, Vus JS, Angular, React, PHP e Laravel">
+    <meta property="og:description" content="Mattia Bocchino software specialist full stack web developer con HTML, CSS, Javascript, Vue JS, Angular, React, PHP e Laravel">
     <meta property="og:image" content="http://www.pmattiab.dev/img/home.jpg">
     <meta property="og:url" content="http://www.pmattiab.dev">
 
     <title>Mattia Bocchino software specialist</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/bootstrap.dark.min.css">
-    <link rel="stylesheet" href="css/site.css?v=1.4">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="css/poppins.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <script type="application/javascript" src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/skills.js?v=1.4"></script>
-    <script src="js/site.js?v=1.4"></script>
-
+    <script type="module" src="js/site.js?v=1.6" defer></script>
 </head>
-<body class="bootstrap">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans min-h-screen transition-colors duration-300">
 
-    <nav>
-        <div class="container">
-            <div class="row navbar-row">
-                <div class="nav-element animate__animated" id="navSkills"><i class="fa-solid fa-code"></i>Skills</div>
-                <div class="nav-element animate__animated" id="navContacts"><i class="fa-regular fa-address-card"></i>Contacts</div>
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-4xl z-50 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-lg transition-all duration-300 px-4 sm:px-6 py-3">
+        <div class="flex justify-between items-center w-full">
+            
+            <div class="flex items-center gap-1 sm:gap-2">
+                <button id="navHome" class="group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold tracking-wide uppercase transition-all duration-300 bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+                    <i class="fa-solid fa-house text-base transition-transform duration-300 group-hover:scale-110"></i>
+                    <span id="labelHome" class="hidden sm:inline"></span>
+                </button>
+
+                <div class="h-5 w-px bg-slate-200 dark:bg-slate-700 mx-1 sm:mx-2"></div>
+
+                <button id="navSkills" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold tracking-wide uppercase opacity-0 translate-y-2 transition-all duration-500 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">
+                    <i class="fa-solid fa-code text-base transition-transform duration-300 group-hover:scale-110"></i> 
+                    <span id="labelSkills"></span>
+                </button>
+
+                <button id="navContacts" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold tracking-wide uppercase opacity-0 translate-y-2 transition-all duration-500 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400">
+                    <i class="fa-regular fa-address-card text-base transition-transform duration-300 group-hover:scale-110"></i> 
+                    <span id="labelContacts"></span>
+                </button>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <button id="langToggle" class="flex items-center justify-center px-3 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 border border-slate-200/40 dark:border-slate-700/40">
+                    <span id="langText" class="flex items-center gap-1.5"></span>
+                </button>
+
+                <button id="themeToggle" class="p-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:ring-2 hover:ring-indigo-500/20 active:scale-95 transition-all duration-200" aria-label="Cambia tema">
+                    <i id="themeToggleDarkIcon" class="fa-solid fa-moon hidden text-lg transition-transform duration-300 rotate-0 hover:-rotate-12"></i>
+                    <i id="themeToggleLightIcon" class="fa-solid fa-sun hidden text-lg text-amber-400 transition-transform duration-500 rotate-0 hover:rotate-45"></i>
+                </button>
             </div>
         </div>
     </nav>
 
-    <header>
-        <div class="container h-100">
-            <div class="row h-100 d-flex justify-content-center align-items-center">
-                <div class="col text-center title">
-                    <h1 id="devTitle"><h1>
-                </div>
-            </div>
+    <header id="headerSection" class="min-h-[calc(100vh-84px)] flex items-center justify-center px-4 transition-all duration-500">
+        <div class="text-center max-w-3xl mx-auto">
+            <h1 id="devTitle" class="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 bg-clip-text text-transparent pb-2 min-h-[4.5rem] md:min-h-[7rem]" style="line-height: 1.2;"></h1>
+            <p class="mt-4 text-base text-slate-400 dark:text-slate-500 animate-pulse">Seleziona una sezione per esplorare le mie competenze</p>
         </div>
     </header>
 
-    <main>
+    <main class="container mx-auto px-4 max-w-5xl py-8">
 
-        <section id="skills">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h2>Skills</h2>
-                    </div>
-                </div>
+        <section id="skills" class="hidden opacity-0 transition-all duration-500 pt-28">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight border-b-4 border-indigo-500 inline-block pb-2 rounded">Competenze</h2>
             </div>
-            <div class="container">
-                <div class="skills-section-container">
-                    <div id="frontEndContainer">
-                        <h3 id="frontEndTitle"></h3>
-                    </div>
-                    <div id="backEndContainer">
-                        <h3 id="backEndTitle"></h3>
-                    </div>
-                    <div id="toolsContainer">
-                        <h3 id="toolsTitle"></h3>
-                    </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div id="frontEndContainer" class="opacity-0 translate-y-4 bg-white dark:bg-slate-800/40 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm backdrop-blur-sm">
+                    <h3 id="frontEndTitle" class="text-xl font-semibold mb-4 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700/60 pb-3 text-indigo-600 dark:text-indigo-400"></h3>
+                    <div class="skill-list space-y-2"></div>
+                </div>
+                
+                <div id="backEndContainer" class="opacity-0 translate-y-4 bg-white dark:bg-slate-800/40 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm backdrop-blur-sm">
+                    <h3 id="backEndTitle" class="text-xl font-semibold mb-4 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700/60 pb-3 text-emerald-600 dark:text-emerald-400"></h3>
+                    <div class="skill-list space-y-2"></div>
+                </div>
+                
+                <div id="toolsContainer" class="opacity-0 translate-y-4 bg-white dark:bg-slate-800/40 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm backdrop-blur-sm">
+                    <h3 id="toolsTitle" class="text-xl font-semibold mb-4 flex items-center gap-2 border-b border-slate-100 dark:border-slate-700/60 pb-3 text-amber-600 dark:text-amber-400"></h3>
+                    <div class="skill-list space-y-2"></div>
                 </div>
             </div>
         </section>
 
-        <section id="contacts">
-            <div class="container text-center">
-                <div class="row mb-5">
-                    <div class="col">
-                        <h2>Contacts</h2>
+        <section id="contacts" class="hidden opacity-0 transition-all duration-500 pt-28">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight border-b-4 border-indigo-500 inline-block pb-2 rounded">Contatti</h2>
+            </div>
+            
+            <div class="max-w-xl mx-auto grid grid-cols-1 gap-4">
+                <div id="linkedinContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 text-xl shrink-0">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div class="text-center sm:text-left w-full">
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Linkedin</h4>
+                            <p class="text-base font-medium">Mattia Bocchino</p>
+                        </div>
                     </div>
+                    <a href="https://it.linkedin.com/in/pmattiab" target="_blank" class="w-full sm:w-auto text-center px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all duration-200">
+                        Profilo <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
+                    </a>
                 </div>
-                <div class="row">
-                    <div class="col-12 linkedin-contact mb-50" id="linkedinContact">
-                        <div class="mb-3">
-                            <h4><i class="fa-brands fa-linkedin mr-12"></i>Linekdin</h4>
+
+                <div id="businessEmailContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 hover:shadow-md transition-shadow duration-300 relative group">
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-700/60 flex items-center justify-center shrink-0 overflow-hidden p-2 group-hover:scale-105 transition-transform duration-200">
+                            <img src="img/logo-digivents.png" alt="Digivents" class="max-w-full max-h-full object-contain">
                         </div>
-                        <div class="contact-detail">
-                            <a href="https://it.linkedin.com/in/pmattiab" target="_blank">
-                                Profile page
-                            </a>
+                        <div class="text-center sm:text-left w-full">
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Business Email (Digivents)</h4>
+                            <a href="mailto:mattia.bocchino@digivents.com" class="text-base font-medium hover:text-indigo-500 break-all select-all">mattia.bocchino@digivents.com</a>
                         </div>
                     </div>
-                    <div class="col-12 email-contact mb-50" id="businessEmailContact">
-                        <div class="mb-3">
-                            <h4><i class="fa-regular fa-envelope mr-12"></i>Business Email</h4>
+                    <button class="copy-btn w-full sm:w-auto px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center gap-2 transition-all duration-200">
+                        <i class="fa-regular fa-copy"></i> <span class="sm:hidden">Copia</span>
+                    </button>
+                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full shadow-md hidden">Copiato!</div>
+                </div>
+
+                <div id="goappEmailContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 hover:shadow-md transition-shadow duration-300 relative group">
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-700/60 flex items-center justify-center shrink-0 overflow-hidden p-2 group-hover:scale-105 transition-transform duration-200">
+                            <img src="img/logo-goapp.png" alt="GoApp" class="max-w-full max-h-full object-contain">
                         </div>
-                        <div class="contact-detail">
-                            <a href="mailto:mattia.bocchino@digivents.com">mattia.bocchino@digivents.com</a>
-                            <i class="fa-regular fa-copy ml-20"></i>
+                        <div class="text-center sm:text-left w-full">
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Business Email (GoApp)</h4>
+                            <a href="mailto:mattia.bocchino@goapp.it" class="text-base font-medium hover:text-indigo-500 break-all select-all">mattia.bocchino@goapp.it</a>
                         </div>
-                        <div class="copied" style="display: none;">copied to clipboard</div>
                     </div>
-                    <div class="col-12 email-contact mb-50" id="personalEmailContact">
-                        <div class="mb-3">
-                            <h4><i class="fa-regular fa-envelope mr-12"></i>Personal Email</h4>
+                    <button class="copy-btn w-full sm:w-auto px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center gap-2 transition-all duration-200">
+                        <i class="fa-regular fa-copy"></i> <span class="sm:hidden">Copia</span>
+                    </button>
+                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full shadow-md hidden">Copiato!</div>
+                </div>
+
+                <div id="personalEmailContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-800/40 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 hover:shadow-md transition-shadow duration-300 relative group">
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500 text-xl shrink-0">
+                            <i class="fa-regular fa-envelope"></i>
                         </div>
-                        <div class="contact-detail">
-                            <a href="mailto:pmattiab@live.it">pmattiab@live.it</a>
-                            <i class="fa-regular fa-copy ml-20"></i>
+                        <div class="text-center sm:text-left w-full">
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Personal Email</h4>
+                            <a href="mailto:pmattiab@live.it" class="text-base font-medium hover:text-purple-500 break-all select-all">pmattiab@live.it</a>
                         </div>
-                        <div class="copied" style="display: none;">copied to clipboard</div>
                     </div>
+                    <button class="copy-btn w-full sm:w-auto px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center gap-2 transition-all duration-200">
+                        <i class="fa-regular fa-copy"></i> <span class="sm:hidden">Copia</span>
+                    </button>
+                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full shadow-md hidden">Copiato!</div>
                 </div>
             </div>
         </section>
