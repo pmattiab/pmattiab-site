@@ -18,6 +18,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+
+        /* TRUCCO MAGICO: Quando il tema è dark, deviamo il viola verso il verde */
+        .dark {
+            --color-purple-400: var(--color-emerald-400); /* Il verdino chiaro per i testi (es. dark:text-purple-400) */
+            --color-purple-500: var(--color-emerald-500); /* Per i background o gli hover (es. dark:hover:bg-purple-500) */
+            --color-purple-600: var(--color-emerald-600);
+        }
+    </style>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,24 +38,6 @@
     <style>
         body { 
             font-family: 'Poppins', sans-serif; 
-        }
-
-        /* Gestione fluida e corretta del Dark Mode per il body */
-        html.dark body {
-            background-color: #020617; /* bg-slate-950 */
-            color: #f8fafc;            /* text-slate-50 */
-        }
-
-        /* Forza i testi descrittivi grigi e i bottoni scuri solo in modalità dark */
-        html.dark p, html.dark h4, html.dark .nav-btn-mobile {
-            color: #94a3b8 !important;
-        }
-        html.dark .copy-btn, html.dark #linkedinBtn, html.dark #themeToggle, html.dark #menuTrigger {
-            background-color: #1e293b !important;
-            color: #cbd5e1 !important;
-        }
-        html.dark .copy-btn:hover, html.dark #menuTrigger:hover {
-            background-color: #334155 !important;
         }
     </style>
 
@@ -113,7 +106,7 @@
 
     <main class="container mx-auto px-4 max-w-5xl">
         
-        <header id="headerSection" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-28 transition-all duration-500">
+        <header id="headerSection" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 md:pt-28 transition-all duration-500">
             <div class="max-w-2xl">
                 <h1 id="devTitle" class="text-4xl sm:text-5xl font-bold tracking-tight leading-tight text-slate-900 dark:text-white min-h-[5rem] sm:min-h-[6rem]"></h1>
                 <p class="label-subhero text-slate-500 dark:text-slate-400 mt-6 text-base sm:text-lg max-w-md mx-auto font-medium"></p>
