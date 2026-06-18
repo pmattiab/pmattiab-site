@@ -35,7 +35,7 @@
     </style>
 
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300 antialiased selection:bg-emerald-500 selection:text-white">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300 antialiased selection:bg-emerald-500 selection:text-slate-300">
 
     <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-4xl z-50 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-lg transition-all duration-300 px-4 py-3">
         <div class="flex justify-between items-center w-full">
@@ -48,18 +48,18 @@
 
                 <div class="h-5 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
 
-                <button id="navSkills" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all">
+                <button id="navSkills" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all">
                     <i class="fa-solid fa-code text-base"></i> 
                     <span class="label-skills"></span>
                 </button>
 
-                <button id="navContacts" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all">
+                <button id="navContacts" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all">
                     <i class="fa-regular fa-address-card text-base"></i> 
                     <span class="label-contacts"></span>
                 </button>
             </div>
 
-            <button id="menuTrigger" class="block md:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 active:scale-95 transition-all duration-200 cursor-pointer" aria-label="Apri menu">
+            <button id="menuTrigger" class="block md:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 active:scale-95 transition-all duration-200 cursor-pointer" aria-label="Apri menu">
                 <i class="fa-solid fa-bars text-lg"></i>
             </button>
             
@@ -86,10 +86,10 @@
             <button id="navHomeMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer w-full">
                 <i class="fa-solid fa-house w-5"></i> <span class="label-home"></span>
             </button>
-            <button id="navSkillsMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-300 cursor-pointer w-full">
+            <button id="navSkillsMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-400 cursor-pointer w-full">
                 <i class="fa-solid fa-code w-5"></i> <span class="label-skills"></span>
             </button>
-            <button id="navContactsMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-300 cursor-pointer w-full">
+            <button id="navContactsMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-400 cursor-pointer w-full">
                 <i class="fa-regular fa-address-card w-5"></i> <span class="label-contacts"></span>
             </button>
         </div>
@@ -101,14 +101,14 @@
         
         <header id="headerSection" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 md:pt-28 transition-all duration-500">
             <div class="max-w-2xl">
-                <h1 id="devTitle" class="text-4xl sm:text-5xl font-bold tracking-tight leading-tight text-slate-900 dark:text-white min-h-[5rem] sm:min-h-[6rem]"></h1>
+                <h1 id="devTitle" class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-500 to-emerald-700 dark:from-emerald-300 dark:to-emerald-700 bg-clip-text text-transparent leading-tight"></h1>
                 <p class="label-subhero text-slate-500 dark:text-slate-400 mt-6 text-base sm:text-lg max-w-md mx-auto font-medium"></p>
             </div>
         </header>
 
         <section id="skills" class="hidden opacity-0 transition-all duration-500 pt-28 pb-16">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight border-b-4 border-emerald-500 inline-block pb-2 rounded"></h2>
+                <h2 class="text-3xl font-bold tracking-tight text-slate-300 border-b-4 border-emerald-500 inline-block pb-2 rounded"></h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -131,22 +131,22 @@
 
         <section id="contacts" class="hidden opacity-0 transition-all duration-500 pt-28 pb-16">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight border-b-4 border-emerald-500 inline-block pb-2 rounded"></h2>
+                <h2 class="text-3xl font-bold tracking-tight text-slate-300 border-b-4 border-emerald-500 inline-block pb-2 rounded"></h2>
             </div>
             
             <div class="max-w-xl mx-auto grid grid-cols-1 gap-4">
                 
                 <div id="linkedinContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300">
                     <div class="flex items-center gap-4 w-full sm:w-auto">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 text-xl shrink-0">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-emerald-500 text-xl shrink-0">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </div>
                         <div class="text-center sm:text-left w-full">
-                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Linkedin</h4>
-                            <p class="text-base font-medium">Mattia Bocchino</p>
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500">Linkedin</h4>
+                            <p class="text-base font-medium text-slate-300">Mattia Bocchino</p>
                         </div>
                     </div>
-                    <a id="linkedinBtn" href="https://it.linkedin.com/in/pmattiab" target="_blank" class="w-full sm:w-auto text-center px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 transition-all duration-200 cursor-pointer">
+                    <a id="linkedinBtn" href="https://it.linkedin.com/in/pmattiab" target="_blank" class="w-full sm:w-auto text-center px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-emerald-600 hover:text-slate-300 dark:hover:bg-emerald-500 transition-all duration-200 cursor-pointer">
                         <span class="btn-profile-text"></span> <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
                     </a>
                 </div>
@@ -157,19 +157,19 @@
                             <img src="img/logo-digivents.png" alt="Digivents" class="max-w-full max-h-full object-contain">
                         </a>
                         <div class="text-center sm:text-left w-full">
-                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400"></h4>
-                            <a href="mailto:mattia.bocchino@digivents.com" class="text-base font-medium hover:text-emerald-500 break-all select-all">mattia.bocchino@digivents.com</a>
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500"></h4>
+                            <a href="mailto:mattia.bocchino@digivents.com" class="text-base font-medium hover:text-emerald-500 text-slate-300 break-all select-all">mattia.bocchino@digivents.com</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 w-full sm:w-auto">
-                        <a href="mailto:mattia.bocchino@digivents.com" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-semibold hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
+                        <a href="mailto:mattia.bocchino@digivents.com" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-semibold hover:bg-emerald-600 hover:text-slate-300 dark:hover:bg-emerald-500 dark:hover:text-slate-300 transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
                             <i class="fa-regular fa-paper-plane"></i> <span class="label-write"></span>
                         </a>
                         <button class="copy-btn w-1/2 sm:w-auto px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer">
                             <i class="fa-regular fa-copy"></i> <span class="label-copy"></span>
                         </button>
                     </div>
-                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full shadow-md hidden animate-bounce"></div>
+                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-slate-300 text-xs px-3 py-1 rounded-full shadow-md hidden animate-bounce"></div>
                 </div>
 
                 <div id="goappEmailContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative group">
@@ -178,40 +178,40 @@
                             <img src="img/logo-goapp.png" alt="GoApp" class="max-w-full max-h-full object-contain">
                         </a>
                         <div class="text-center sm:text-left w-full">
-                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400"></h4>
-                            <a href="mailto:mattia.bocchino@goapp.it" class="text-base font-medium hover:text-emerald-500 break-all select-all">mattia.bocchino@goapp.it</a>
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500"></h4>
+                            <a href="mailto:mattia.bocchino@goapp.it" class="text-base font-medium hover:text-emerald-500 text-slate-300 break-all select-all">mattia.bocchino@goapp.it</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 w-full sm:w-auto">
-                        <a href="mailto:mattia.bocchino@goapp.it" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-semibold hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
+                        <a href="mailto:mattia.bocchino@goapp.it" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-semibold hover:bg-emerald-600 hover:text-slate-300 dark:hover:bg-emerald-500 dark:hover:text-slate-300 transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
                             <i class="fa-regular fa-paper-plane"></i> <span class="label-write"></span>
                         </a>
                         <button class="copy-btn w-1/2 sm:w-auto px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer">
                             <i class="fa-regular fa-copy"></i> <span class="label-copy"></span>
                         </button>
                     </div>
-                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full shadow-md hidden animate-bounce"></div>
+                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-slate-300 text-xs px-3 py-1 rounded-full shadow-md hidden animate-bounce"></div>
                 </div>
 
                 <div id="personalEmailContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative group">
                     <div class="flex items-center gap-4 w-full sm:w-auto">
-                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500 text-xl shrink-0">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-xl shrink-0">
                             <i class="fa-regular fa-envelope"></i>
                         </div>
                         <div class="text-center sm:text-left w-full">
-                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400"></h4>
-                            <a href="mailto:pmattiab@live.it" class="text-base font-medium hover:text-purple-500 break-all select-all">pmattiab@live.it</a>
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500"></h4>
+                            <a href="mailto:pmattiab@live.it" class="text-base font-medium hover:text-emerald-500 text-slate-300 break-all select-all">pmattiab@live.it</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 w-full sm:w-auto">
-                        <a href="mailto:pmattiab@live.it" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 text-sm font-semibold hover:bg-purple-600 hover:text-white dark:hover:bg-purple-500 dark:hover:text-white transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
+                        <a href="mailto:pmattiab@live.it" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-sm font-semibold hover:bg-emerald-600 hover:text-slate-300 dark:hover:bg-emerald-500 dark:hover:text-slate-300 transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
                             <i class="fa-regular fa-paper-plane"></i> <span class="label-write"></span>
                         </a>
                         <button class="copy-btn w-1/2 sm:w-auto px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer">
                             <i class="fa-regular fa-copy"></i> <span class="label-copy"></span>
                         </button>
                     </div>
-                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-white text-xs px-3 py-1 rounded-full shadow-md hidden animate-bounce"></div>
+                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-slate-300 text-xs px-3 py-1 rounded-full shadow-md hidden animate-bounce"></div>
                 </div>
             </div>
         </section>

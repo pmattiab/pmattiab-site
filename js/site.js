@@ -242,12 +242,12 @@ document.addEventListener("DOMContentLoaded", () => {
         
         categoryData.forEach(item => {
             const wrapper = document.createElement('div');
-            wrapper.className = 'flex items-center gap-4 p-3 pt-1 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all duration-200 group';
+            wrapper.className = 'flex items-center gap-4 p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all duration-200 group';
             wrapper.innerHTML = `
                 <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:scale-110 transition-transform duration-200 overflow-hidden p-1.5 shadow-sm">
                     <img class="max-w-full max-h-full object-contain" src="img/${item.path}" alt="${item.title}">
                 </div>
-                <div class="font-medium text-slate-600 dark:text-slate-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200">${item.title}</div>
+                <div class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200">${item.title}</div>
             `;
             fragment.appendChild(wrapper);
         });
@@ -295,11 +295,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Reset classi attive bottoni desktop
         [elements.navHome, elements.navSkills, elements.navContacts].forEach(btn => {
-            btn.className = "group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all";
+            btn.className = "group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all";
         });
         // Reset classi attive bottoni mobile
         [elements.navHomeMobile, elements.navSkillsMobile, elements.navContactsMobile].forEach(btn => {
-            btn.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-300 cursor-pointer w-full";
+            btn.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-400 cursor-pointer w-full";
         });
 
         // Nascondi tutte le sezioni principali
