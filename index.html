@@ -36,7 +36,7 @@
 
 </head>
 
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300 antialiased selection:bg-emerald-500 selection:text-slate-300">
+<body class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300 antialiased selection:bg-emerald-500 selection:text-slate-300">
 
     <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-4xl z-50 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-lg transition-all duration-300 px-4 py-3">
         <div class="flex justify-between items-center w-full">
@@ -102,8 +102,9 @@
         
         <header id="headerSection" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 md:pt-28 transition-all duration-500">
             <div class="max-w-2xl">
-                <h1 id="devTitle" class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-500 to-emerald-700 dark:from-emerald-300 dark:to-emerald-700 bg-clip-text text-transparent leading-tight"></h1>
-                <p class="label-subhero text-slate-500 dark:text-slate-400 mt-6 text-base sm:text-lg max-w-md mx-auto font-medium"></p>
+                <h1 id="devTitle" class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-500 to-emerald-700 dark:from-emerald-300 dark:to-emerald-700 bg-clip-text text-transparent leading-tight"></h1>
+                <p class="label-subhero-location text-slate-500 dark:text-slate-600 mt-6 text-base sm:text-lg max-w-md mx-auto font-medium"></p>
+                <p class="label-subhero-work text-slate-500 dark:text-slate-600 mt-2 text-base sm:text-lg max-w-md mx-auto font-medium"></p>
             </div>
         </header>
 
@@ -139,7 +140,7 @@
                 
                 <div id="linkedinContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300">
                     <div class="flex items-center gap-4 w-full sm:w-auto">
-                        <div class="w-12 h-12 rounded-xl bg-[#0a66c2] dark:bg-blue-500/20 flex items-center justify-center text-slate-200 dark:text-emerald-500 text-xl shrink-0">
+                        <div class="w-12 h-12 rounded-xl bg-[#0a66c2] flex items-center justify-center text-slate-300 text-xl shrink-0">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </div>
                         <div class="text-center sm:text-left w-full">
@@ -260,7 +261,8 @@
                     home: "Home",
                     skills: "Competenze",
                     contacts: "Contatti",
-                    subHero: "Seleziona una sezione per esplorare le mie competenze",
+                    subHeroLocation: "<i class='fa-solid fa-location-dot mr-1 transform-[translateY(-1px)]'></i> Avellino, Campania, Italia",
+                    subHeroWork: "<i class='fa-solid fa-briefcase ml-5 mr-1 transform-[translateY(1px)]'></i> Sviluppatore software <a href='https://www.goapp.it' target='_blank' class='text-emerald-500 dark:text-slate-400/70 hover:text-emerald-300/80'>@GoApp</a>",
                     titleText: "Ciao, sono Mattia e sviluppo soluzioni web full-stack.",
                     toolsTitle: "Strumenti & DevOps",
                     digiventsLabel: "Email Aziendale / Progetti Digivents",
@@ -275,7 +277,8 @@
                     home: "Home",
                     skills: "Skills",
                     contacts: "Contacts",
-                    subHero: "Select a section to explore my expertise",
+                    subHeroLocation: "<i class='fa-solid fa-location-dot mr-1 transform-[translateY(-1px)]'></i> Avellino, Campania, Italy",
+                    subHeroWork: "<i class='fa-solid fa-briefcase ml-5 mr-1 transform-[translateY(1px)]'></i> Software developer <a href='https://www.goapp.it' target='_blank' class='text-emerald-500 dark:text-slate-400/70 hover:text-emerald-300/80'>@GoApp</a>",
                     titleText: "Hi, I'm Mattia and I build full-stack web solutions.",
                     toolsTitle: "Development Tools & DevOps",
                     digiventsLabel: "Corporate Email / Digivents Projects",
@@ -294,7 +297,8 @@
                 skillsSection: document.querySelector("#skills"),
                 contactsSection: document.querySelector("#contacts"),
                 devTitle: document.querySelector("#devTitle"),
-                subHeroText: document.querySelector("#headerSection p"),
+                subHeroLocation: document.querySelector(".label-subhero-location"),
+                subHeroWork: document.querySelector(".label-subhero-work"),
                 // Bottoni Navbar Desktop
                 navHome: document.querySelector("#navHome"),
                 navSkills: document.querySelector("#navSkills"),
@@ -395,7 +399,12 @@
                 elements.contactsMainTitle.textContent = data.contacts;
                 
                 // Modificato qui: usiamo il selettore di classe così aggiorna sempre il testo corretto
-                document.querySelectorAll(".label-subhero").forEach(el => el.textContent = data.subHero);
+                if (elements.subHeroLocation) {
+                    elements.subHeroLocation.innerHTML = data.subHeroLocation;
+                }
+                if (elements.subHeroWork) {
+                    elements.subHeroWork.innerHTML = data.subHeroWork;
+                }
 
                 elements.frontEndTitle.textContent = "Front-end";
                 elements.backEndTitle.textContent = "Back-end";
