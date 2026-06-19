@@ -54,6 +54,11 @@
                     <span class="label-skills"></span>
                 </button>
 
+                <button id="navExperience" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all">
+                    <i class="fa-solid fa-briefcase text-base"></i> 
+                    <span class="label-experience"></span>
+                </button>
+
                 <button id="navContacts" class="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all">
                     <i class="fa-regular fa-address-card text-base"></i> 
                     <span class="label-contacts"></span>
@@ -89,6 +94,9 @@
             </button>
             <button id="navSkillsMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-400 cursor-pointer w-full">
                 <i class="fa-solid fa-code w-5"></i> <span class="label-skills"></span>
+            </button>
+            <button id="navExperienceMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-400 cursor-pointer w-full">
+                <i class="fa-solid fa-briefcase w-5"></i> <span class="label-experience"></span>
             </button>
             <button id="navContactsMobile" class="flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-400 cursor-pointer w-full">
                 <i class="fa-regular fa-address-card w-5"></i> <span class="label-contacts"></span>
@@ -128,6 +136,49 @@
                     <h3 id="toolsTitle" class="text-xl font-bold text-center mb-6 text-emerald-600 dark:text-emerald-400"></h3>
                     <div class="skill-list flex flex-col gap-2"></div>
                 </div>
+            </div>
+        </section>
+
+        <section id="experience" class="hidden opacity-0 transition-all duration-500 pt-28 pb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-700 dark:text-slate-300 border-b-4 border-emerald-500 inline-block pb-2 rounded label-experience"></h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900/40 p-6 md:p-8 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 dark:bg-emerald-500/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-6 pb-6 border-b border-slate-100 dark:border-slate-800/60">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-2xl shrink-0">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-100 label-exp-role"></h3>
+                        <p class="text-emerald-600 dark:text-emerald-400 font-medium label-exp-company text-sm md:text-base mt-1"></p>
+                    </div>
+                </div>
+
+                <ul class="space-y-4 text-slate-600 dark:text-slate-300 text-sm md:text-base">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-diagram-project text-emerald-500 mt-1 shrink-0"></i>
+                        <span class="label-exp-1 leading-relaxed"></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-code text-emerald-500 mt-1 shrink-0"></i>
+                        <span class="label-exp-2 leading-relaxed"></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-layer-group text-emerald-500 mt-1 shrink-0"></i>
+                        <span class="label-exp-3 leading-relaxed"></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-screwdriver-wrench text-emerald-500 mt-1 shrink-0"></i>
+                        <span class="label-exp-4 leading-relaxed"></span>
+                    </li>
+                    <li class="flex items-start gap-3 bg-emerald-50/50 dark:bg-emerald-500/5 p-3 rounded-xl border border-emerald-100 dark:border-emerald-500/10">
+                        <i class="fa-solid fa-lock text-emerald-600 dark:text-emerald-400 mt-1 shrink-0"></i>
+                        <span class="label-exp-5 leading-relaxed font-medium text-emerald-800 dark:text-emerald-200"></span>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -227,7 +278,15 @@
                     visitProfile: "Profilo",
                     write: "Scrivi",
                     copy: "Copia",
-                    copiedMsg: "Copiato!"
+                    copiedMsg: "Copiato!",
+                    experience: "Esperienza",
+                    expRole: "Full Stack Web Developer & RGSI",
+                    expCompany: "@ GoApp / Digivents",
+                    exp1: "Gestione e coordinamento di progetti software in qualità di Project Lead",
+                    exp2: "Sviluppo end-to-end di nuove architetture web (React.js, .NET Core) per la gestione eventi, integrando sistemi di SSO authentication, registrazione utenti, invio mail, e-commerce, booking, votazione elettronica (Eligo), travel e accommodation",
+                    exp3: "Modernizzazione del CMS Digivents: migrazione progressiva verso un'architettura a microfrontend con API RESTful",
+                    exp4: "Manutenzione, ottimizzazione e refactoring di complessi moduli legacy scritti in ASP.NET (ASPX) per garantire massima stabilità operativa",
+                    exp5: "Responsabile della Gestione della Sicurezza delle Informazioni (RGSI): creazione dei processi per l'ottenimento della certificazione ISO 27001 (con IMQ nel triennio 2025-2027)"
                 },
                 en: {
                     home: "Home",
@@ -241,7 +300,15 @@
                     visitProfile: "Profile",
                     write: "Write",
                     copy: "Copy",
-                    copiedMsg: "Copied!"
+                    copiedMsg: "Copied!",
+                    experience: "Experience",
+                    expRole: "Full Stack Web Developer & ISMS Manager",
+                    expCompany: "@ GoApp / Digivents",
+                    exp1: "Managing and coordinating software projects as a Project Lead",
+                    exp2: "End-to-end development of new web architectures (React.js, .NET Core) for event management, integrating SSO authentication, user registration, email dispatch, e-commerce, booking, electronic voting (Eligo), travel, and accommodation systems",
+                    exp3: "Digivents CMS modernization: progressive migration towards a microfrontend architecture powered by RESTful APIs",
+                    exp4: "Maintenance, optimization, and refactoring of complex legacy modules in ASP.NET (ASPX) to ensure maximum operational stability",
+                    exp5: "Information Security Management System (ISMS) Manager: creating the processes to achieve ISO 27001 certification (with IMQ for the 2025-2027 three-year period)"
                 }
             };
 
@@ -273,6 +340,10 @@
                 frontEndContainer: document.querySelector("#frontEndContainer"),
                 backEndContainer: document.querySelector("#backEndContainer"),
                 toolsContainer: document.querySelector("#toolsContainer"),
+                // Esperienza
+                experienceSection: document.querySelector("#experience"),
+                navExperience: document.querySelector("#navExperience"),
+                navExperienceMobile: document.querySelector("#navExperienceMobile"),
                 // Elementi Sezione Contatti
                 contactsMainTitle: document.querySelector("#contacts h2"),
                 linkedinBtn: document.querySelector("#linkedinBtn"), // Corretto ID selettore diretto
@@ -336,19 +407,28 @@
 
             // ==========================================
             // 4. INTERFACCIA INTERNAZIONALE (i18n)
-            // ==========================================
             function updateInterfaceTexts() {
                 const lang = config.currentLang;
                 const data = translations[lang];
 
+                // Popola i testi della navbar e dei titoli principali
                 document.querySelectorAll(".label-home").forEach(el => el.textContent = data.home);
                 document.querySelectorAll(".label-skills").forEach(el => el.textContent = data.skills);
                 document.querySelectorAll(".label-contacts").forEach(el => el.textContent = data.contacts);
+                document.querySelectorAll(".label-experience").forEach(el => el.textContent = data.experience);
 
-                elements.skillsMainTitle.textContent = data.skills;
-                elements.contactsMainTitle.textContent = data.contacts;
+                if (elements.skillsMainTitle) elements.skillsMainTitle.textContent = data.skills;
+                if (elements.contactsMainTitle) elements.contactsMainTitle.textContent = data.contacts;
                 
-                // Modificato qui: usiamo il selettore di classe così aggiorna sempre il testo corretto
+                // Iniezione testi della sezione Esperienza
+                if (document.querySelector(".label-exp-role")) document.querySelector(".label-exp-role").textContent = data.expRole;
+                if (document.querySelector(".label-exp-company")) document.querySelector(".label-exp-company").textContent = data.expCompany;
+                if (document.querySelector(".label-exp-1")) document.querySelector(".label-exp-1").textContent = data.exp1;
+                if (document.querySelector(".label-exp-2")) document.querySelector(".label-exp-2").textContent = data.exp2;
+                if (document.querySelector(".label-exp-3")) document.querySelector(".label-exp-3").textContent = data.exp3;
+                if (document.querySelector(".label-exp-4")) document.querySelector(".label-exp-4").textContent = data.exp4;
+                if (document.querySelector(".label-exp-5")) document.querySelector(".label-exp-5").textContent = data.exp5;
+
                 if (elements.subHeroLocation) {
                     elements.subHeroLocation.innerHTML = data.subHeroLocation;
                 }
@@ -356,14 +436,18 @@
                     elements.subHeroWork.innerHTML = data.subHeroWork;
                 }
 
-                elements.frontEndTitle.textContent = "Front-end";
-                elements.backEndTitle.textContent = "Back-end";
-                elements.toolsTitle.textContent = data.toolsTitle;
+                if (elements.frontEndTitle) elements.frontEndTitle.textContent = "Front-end";
+                if (elements.backEndTitle) elements.backEndTitle.textContent = "Back-end";
+                if (elements.toolsTitle) elements.toolsTitle.textContent = data.toolsTitle;
 
-                if(elements.labelEmail) elements.labelEmail.textContent = data.emailLabel;
+                if (elements.labelDigivents) elements.labelDigivents.textContent = data.digiventsLabel;
+                if (elements.labelGoApp) elements.labelGoApp.textContent = data.goappLabel;
+                if (elements.labelPersonal) elements.labelPersonal.textContent = data.personalLabel;
 
-                const profileBtnText = elements.linkedinBtn.querySelector('.btn-profile-text');
-                if (profileBtnText) profileBtnText.textContent = data.visitProfile;
+                if (elements.linkedinBtn) {
+                    const profileBtnText = elements.linkedinBtn.querySelector('.btn-profile-text');
+                    if (profileBtnText) profileBtnText.textContent = data.visitProfile;
+                }
 
                 document.querySelectorAll(".label-write").forEach(span => span.textContent = data.write);
                 document.querySelectorAll(".label-copy").forEach(span => span.textContent = data.copy);
@@ -474,22 +558,24 @@
                 config.activeSection = sectionName;
 
                 // Reset classi attive bottoni desktop
-                [elements.navHome, elements.navSkills, elements.navContacts].forEach(btn => {
-                    btn.className = "group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all";
+                [elements.navHome, elements.navSkills, elements.navExperience, elements.navContacts].forEach(btn => {
+                    if(btn) btn.className = "group flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-semibold uppercase text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-pointer transition-all";
                 });
                 // Reset classi attive bottoni mobile
-                [elements.navHomeMobile, elements.navSkillsMobile, elements.navContactsMobile].forEach(btn => {
-                    btn.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-400 cursor-pointer w-full";
+                [elements.navHomeMobile, elements.navSkillsMobile, elements.navExperienceMobile, elements.navContactsMobile].forEach(btn => {
+                    if(btn) btn.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-semibold text-slate-600 dark:text-slate-400 cursor-pointer w-full";
                 });
 
                 // Nascondi tutte le sezioni principali
-                [elements.header, elements.skillsSection, elements.contactsSection].forEach(sec => {
-                    sec.classList.add('hidden');
-                    sec.classList.remove('opacity-100');
-                    sec.classList.add('opacity-0');
+                [elements.header, elements.skillsSection, elements.experienceSection, elements.contactsSection].forEach(sec => {
+                    if(sec) {
+                        sec.classList.add('hidden');
+                        sec.classList.remove('opacity-100');
+                        sec.classList.add('opacity-0');
+                    }
                 });
 
-                // Applica stili al bottone attivo in base alla sezione
+                // Applica stili al blocco attivo
                 if (sectionName === "home") {
                     elements.navHome.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer";
                     elements.navHomeMobile.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer w-full";
@@ -508,15 +594,23 @@
                     elements.skillsSection.classList.remove('opacity-0');
                     elements.skillsSection.classList.add('opacity-100');
 
-                    // Reset ed entrata sequenziale delle 3 card skill
                     const cards = [elements.frontEndContainer, elements.backEndContainer, elements.toolsContainer];
-                    cards.forEach(c => c.className = "opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-6 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 hover:dark:border-emerald-800 hover:dark:border-emerald-800 shadow-sm transition-all duration-500");
+                    cards.forEach(c => { if(c) c.className = "opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-6 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 hover:dark:border-emerald-800 shadow-sm transition-all duration-500"; });
                     
                     for (let i = 0; i < cards.length; i++) {
                         await delay(150);
-                        cards[i].classList.remove('opacity-0', 'translate-y-4');
-                        cards[i].classList.add('opacity-100', 'translate-y-0');
+                        if(cards[i]) cards[i].classList.remove('opacity-0', 'translate-y-4');
+                        if(cards[i]) cards[i].classList.add('opacity-100', 'translate-y-0');
                     }
+
+                } else if (sectionName === "experience") {
+                    elements.navExperience.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer";
+                    elements.navExperienceMobile.className = "flex items-center gap-4 px-4 py-3 rounded-xl text-left text-base font-bold bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer w-full";
+                    
+                    elements.experienceSection.classList.remove('hidden');
+                    await delay(50);
+                    elements.experienceSection.classList.remove('opacity-0');
+                    elements.experienceSection.classList.add('opacity-100');
 
                 } else if (sectionName === "contacts") {
                     elements.navContacts.className = "group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold uppercase transition-all duration-300 bg-emerald-50/80 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 cursor-pointer";
@@ -527,13 +621,12 @@
                     elements.contactsSection.classList.remove('opacity-0');
                     elements.contactsSection.classList.add('opacity-100');
 
-                    // Reset ed entrata sequenziale dei blocchi contatti
-                    elements.contactBlocks.forEach(b => b.className = "opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 hover:dark:border-emerald-800 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative group");
+                    elements.contactBlocks.forEach(b => { if(b) b.className = "opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 hover:dark:border-emerald-800 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative group"; });
                     
                     for (let i = 0; i < elements.contactBlocks.length; i++) {
                         await delay(100);
-                        elements.contactBlocks[i].classList.remove('opacity-0', 'translate-y-4');
-                        elements.contactBlocks[i].classList.add('opacity-100', 'translate-y-0');
+                        if(elements.contactBlocks[i]) elements.contactBlocks[i].classList.remove('opacity-0', 'translate-y-4');
+                        if(elements.contactBlocks[i]) elements.contactBlocks[i].classList.add('opacity-100', 'translate-y-0');
                     }
                 }
             }
@@ -563,6 +656,8 @@
                 // Navigazione Mobile + Chiusura automatica drawer al click
                 elements.navHomeMobile.addEventListener('click', () => { switchSection('home'); toggleMobileMenu(false); });
                 elements.navSkillsMobile.addEventListener('click', () => { switchSection('skills'); toggleMobileMenu(false); });
+                elements.navExperience.addEventListener('click', () => switchSection('experience'));
+                elements.navExperienceMobile.addEventListener('click', () => { switchSection('experience'); toggleMobileMenu(false); });
                 elements.navContactsMobile.addEventListener('click', () => { switchSection('contacts'); toggleMobileMenu(false); });
 
                 // Eventi Drawer Hamburger
