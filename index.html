@@ -188,7 +188,7 @@
             </div>
             
             <div class="max-w-xl mx-auto grid grid-cols-1 gap-4">
-                
+    
                 <div id="linkedinContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 hover:dark:border-emerald-800 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300">
                     <div class="flex items-center gap-4 w-full sm:w-auto">
                         <div class="w-12 h-12 rounded-xl bg-[#0a66c2] flex items-center justify-center text-slate-200 dark:text-slate-300 text-xl shrink-0">
@@ -204,13 +204,49 @@
                     </a>
                 </div>
 
+                <div id="cvContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 hover:dark:border-emerald-800 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-xl shrink-0">
+                            <i class="fa-regular fa-file-pdf"></i>
+                        </div>
+                        <div class="text-center sm:text-left w-full">
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-600">Curriculum Vitae</h4>
+                            <p class="text-base font-medium text-slate-500/80 dark:text-slate-300 label-cv-sub"></p>
+                        </div>
+                    </div>
+                    <a href="cv.pdf" download="Mattia_Bocchino_CV.pdf" class="w-full sm:w-auto text-center px-4 py-2 rounded-xl text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 text-sm font-semibold hover:bg-emerald-600 hover:text-slate-200 dark:hover:bg-emerald-500 dark:hover:text-slate-800 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2">
+                        <span class="label-cv-btn"></span> <i class="fa-solid fa-download text-xs"></i>
+                    </a>
+                </div>
+
+                <div id="whatsappContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 hover:dark:border-emerald-800 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative group">
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <div class="w-12 h-12 rounded-xl bg-[#25d366]/10 flex items-center justify-center text-[#25d366] text-xl shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="text-center sm:text-left w-full">
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-600">WhatsApp</h4>
+                            <span class="text-base font-medium text-slate-500/80 dark:text-slate-300 break-all select-all">+39 320 714 1177</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 w-full sm:w-auto">
+                        <a href="https://wa.me/393207141177" target="_blank" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl text-sm font-semibold bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-slate-200 dark:hover:bg-emerald-500 dark:hover:text-slate-800 transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
+                            <i class="fa-regular fa-paper-plane"></i> <span class="label-write"></span>
+                        </a>
+                        <button class="copy-btn w-1/2 sm:w-auto px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:text-slate-200 text-sm font-medium hover:bg-slate-700 dark:hover:text-slate-800 dark:hover:bg-slate-300 flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer" data-copy="+393207141177">
+                            <i class="fa-regular fa-copy"></i> <span class="label-copy"></span>
+                        </button>
+                    </div>
+                    <div class="copied absolute -top-2 right-4 bg-emerald-500 text-slate-300 text-xs px-3 py-1 rounded-full shadow-md hidden animate-bounce"></div>
+                </div>
+
                 <div id="emailContact" class="opacity-0 translate-y-4 bg-white dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200/60 dark:border-emerald-800/40 hover:dark:border-emerald-800 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 relative group">
                     <div class="flex items-center gap-4 w-full sm:w-auto">
                         <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-xl shrink-0">
                             <i class="fa-regular fa-envelope"></i>
                         </div>
                         <div class="text-center sm:text-left w-full">
-                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-600"></h4>
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-600">Email</h4>
                             <span class="text-base font-medium text-slate-500/80 dark:text-slate-300 break-all select-all">pmattiab@live.it</span>
                         </div>
                     </div>
@@ -218,7 +254,7 @@
                         <a href="mailto:pmattiab@live.it" class="w-1/2 sm:w-auto text-center px-3 py-2 rounded-xl text-sm font-semibold bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-slate-200 dark:hover:bg-emerald-500 dark:hover:text-slate-800 transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer">
                             <i class="fa-regular fa-paper-plane"></i> <span class="label-write"></span>
                         </a>
-                        <button class="copy-btn w-1/2 sm:w-auto px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:text-slate-200 dark:hover:text-slate-800 text-sm font-medium hover:bg-slate-700 dark:hover:bg-slate-300 flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer">
+                        <button class="copy-btn w-1/2 sm:w-auto px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:text-slate-200 text-sm font-medium hover:bg-slate-700 dark:hover:text-slate-800 dark:hover:bg-slate-300 flex items-center justify-center gap-1.5 transition-all duration-200 cursor-pointer" data-copy="pmattiab@live.it">
                             <i class="fa-regular fa-copy"></i> <span class="label-copy"></span>
                         </button>
                     </div>
@@ -279,6 +315,9 @@
                     write: "Scrivi",
                     copy: "Copia",
                     copiedMsg: "Copiato!",
+                    cvSub: "Scarica il mio CV aggiornato",
+                    cvBtn: "Scarica",
+                    emailLabel: "Email",
                     experience: "Esperienza",
                     expRole: "Full Stack Web Developer & RGSI",
                     expCompany: "@ GoApp / Digivents",
@@ -301,6 +340,9 @@
                     write: "Write",
                     copy: "Copy",
                     copiedMsg: "Copied!",
+                    cvSub: "Download my updated CV",
+                    cvBtn: "Download",
+                    emailLabel: "Email",
                     experience: "Experience",
                     expRole: "Full Stack Web Developer & ISMS Manager",
                     expCompany: "@ GoApp / Digivents",
@@ -357,6 +399,8 @@
                 // Array blocchi contatti per dissolvenze sequenziali
                 contactBlocks: [
                     document.querySelector("#linkedinContact"),
+                    document.querySelector("#cvContact"),
+                    document.querySelector("#whatsappContact"),
                     document.querySelector("#emailContact")
                 ]
             };
@@ -443,6 +487,10 @@
                 if (elements.labelDigivents) elements.labelDigivents.textContent = data.digiventsLabel;
                 if (elements.labelGoApp) elements.labelGoApp.textContent = data.goappLabel;
                 if (elements.labelPersonal) elements.labelPersonal.textContent = data.personalLabel;
+
+                if (document.querySelector(".label-cv-sub")) document.querySelector(".label-cv-sub").textContent = data.cvSub;
+                if (document.querySelector(".label-cv-btn")) document.querySelector(".label-cv-btn").textContent = data.cvBtn;
+                if (elements.labelEmail) elements.labelEmail.textContent = data.emailLabel;
 
                 if (elements.linkedinBtn) {
                     const profileBtnText = elements.linkedinBtn.querySelector('.btn-profile-text');
@@ -532,12 +580,11 @@
                     btn.addEventListener("click", async (e) => {
                         const targetBtn = e.currentTarget;
                         const card = targetBtn.closest('.group');
-                        const emailLink = card.querySelector('a[href^="mailto:"]');
-                        if (!emailLink) return;
+                        const textToCopy = targetBtn.getAttribute('data-copy');
+                        if (!textToCopy) return;
 
-                        const email = emailLink.textContent.trim();
                         try {
-                            await navigator.clipboard.writeText(email);
+                            await navigator.clipboard.writeText(textToCopy);
                             const toast = card.querySelector('.copied');
                             if (toast) {
                                 toast.classList.remove('hidden');
