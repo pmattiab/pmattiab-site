@@ -108,7 +108,7 @@
 
     <main class="container mx-auto px-4 max-w-5xl">
         
-        <header id="headerSection" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 md:pt-28 transition-all duration-500">
+        <header id="headerSection" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-10 md:pt-28 transition-all duration-500">
             <div class="max-w-2xl">
                 <h1 id="devTitle" class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-500 to-emerald-700 dark:from-emerald-300 dark:to-emerald-700 bg-clip-text text-transparent leading-tight"></h1>
                 <p class="label-subhero-location text-slate-500 dark:text-slate-600 mt-6 text-base sm:text-lg max-w-md mx-auto font-medium"></p>
@@ -270,31 +270,26 @@
         // OGGETTO SKILLS 
         const skills = {
             frontEnd: [
-                { title: "HTML 5", path: "html.png" },
-                { title: "CSS 3", path: "css.png" },
-                { title: "JavaScript ES6", path: "javascript.png" },
-                { title: "TypeScript", path: "typescript.png" },
                 { title: "React JS", path: "react.png" },
                 { title: "Vue JS", path: "vuejs.png" },
-                { title: "Node JS", path: "nodejs.png" },
+                { title: "JavaScript / TS", path: "typescript.png" },
+                { title: "Tailwind CSS / Bootstrap", path: "tailwind.png" },
                 { title: "Vite JS", path: "vitejs.png" }
             ],
             backEnd: [
-                { title: "C#", path: "c-sharp.png" },
-                { title: ".NET Core", path: "net-core.png" },
-                { title: ".NET Framework", path: "net-framework.png" },
-                { title: "PHP", path: "php.png" },
-                { title: "Laravel", path: "laravel.png" },
-                { title: "SQL", path: "sql.png" },
+                { title: "C# .NET Core", path: "net-core.png" },
+                { title: "Node JS", path: "nodejs.png" },
+                { title: "PHP / Laravel", path: "laravel.png" },
+                { title: "SQL Server / MySQL", path: "sql.png" },
                 { title: "DynamoDB", path: "dynamodb.png" }
             ],
             tools: [
-                { title: "Git", path: "git.png" },
+                { title: "Git & Version Control", path: "git.png" },
                 { title: "Docker", path: "docker.png" },
-                { title: "Postman", path: "postman.png" },
-                { title: "MySQL Workbench", path: "mysql.png" },
-                { title: "NoSQL Workbench", path: "nosql.png" },
-                { title: "Amazon Web Services", path: "aws.png" }
+                { title: "Amazon Web Services", path: "aws.png" },
+                { title: "CI/CD & GitHub Actions", path: "github-actions.png" },
+                { title: "API Testing (Bruno / Postman)", path: "bruno-postman.png" },
+                { title: "Web Security & SSO", path: "sso.png" }
             ]
         };
 
@@ -554,7 +549,7 @@
                 
                 categoryData.forEach(item => {
                     const wrapper = document.createElement('div');
-                    wrapper.className = 'flex items-center gap-4 p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all duration-200 group';
+                    wrapper.className = 'flex items-center gap-4 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all duration-200 group';
                     wrapper.innerHTML = `
                         <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-lg group-hover:scale-110 transition-transform duration-200 overflow-hidden p-1.5 shadow-sm">
                             <img class="max-w-full max-h-full object-contain" src="img/${item.path}" alt="${item.title}">
